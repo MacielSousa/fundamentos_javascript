@@ -1,3 +1,3 @@
-const saudacoes = require('./passandoPametros');
+const saudacoes = require('./passandoParametros');
 
 console.log(saudacoes('Maciel', 'Fernando', 'Lucas', 'Ferreira', 'Sousa'));

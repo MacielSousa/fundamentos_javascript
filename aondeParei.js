@@ -1,1 +1,0 @@
-9. Objeto Global do Node
