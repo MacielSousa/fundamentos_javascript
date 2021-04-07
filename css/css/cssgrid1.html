@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Grid #01</title>
+    <style>
+        /* https://caniuse.com/#feat=css-grid */
+        
+        html,
+        body {
+            margin: 20px;
+            height: calc(100% - 40px);
+            background-color: lightgray;
+        }
+        
+        div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            border: solid 5px dodgerblue;
+            background: #fff;
+        }
+        /* Trabalhando com o Display Grid */
+        body{
+            /*Usando o DisplayGrid */
+            display: grid;
+            /* Definindo qual a organização do meu template dentro do CSS*/
+            grid-template-columns: 50% 50%;/* Dividindo a minha grid dentro da tela em duas colunas cada uma ocupando 50% da tela*/
+            /* Dividindo o elemento em 12 colunas*/
+            grid-template-columns: repeat(4, 8.33% 8.33% 8.33%);/* A função repeat, funciona da seguinte forma mutiplica o valor 4 pelo os valores da 8.33% 8.33% 8.33% que dá no total de 12 colunas*/
+            /* Dividindo o elemento em 12 colunas*/
+            grid-template-columns: repeat(4, 8.33%);/* A função repeat, funciona da seguinte forma mutiplica o valor 4 pelo os valores 8.33% que dá no total de 4 colunas*/
+            /* Dividindo o elemento em 11 colunas*/
+            grid-template-columns: repeat(11, 100px) 100px;/* A função repeat, funciona da seguinte forma mutiplica o valor 4 pelo os valores 8.33% que dá no total de 4 colunas*/
+        }
+    </style>
+</head>
+
+<body>
+    <div class="d1">1</div>
+    <div class="d2">2</div>
+    <div class="d3">3</div>
+    <div class="d4">4</div>
+    <div class="d5">5</div>
+    <div class="d6">6</div>
+    <div class="d7">7</div>
+    <div class="d8">8</div>
+    <div class="d9">9</div>
+    <div class="d10">10</div>
+    <div class="d11">11</div>
+    <div class="d12">12</div>
+</body>
+
+</html>

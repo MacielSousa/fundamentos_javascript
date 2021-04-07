@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Flexbox #02</title>
+    <link rel="stylesheet" href="css/tag.css">
+    <style>
+        /* ... */
+        .flex-container {
+            display: flex; /*Organizando os elementos de dentro do container em linhas */
+            height: 300px; /* Definindo a altura da caixa  */
+            width: 600px; /* Definindo a largura do componente*/
+        }
+        
+        .flex-container div:nth-child(3) { /* Aplicar a propriedade ao terceiro filho */
+            background-color: indianred; /* Aplicando a cor de fundo do elemento */
+            order: 1; /* Será colocado com ultimo seguindo a ordem que segue*/
+            order: 0; /* Segue a ordem que foi definido pelo html*/
+            order: -1; /* E definido como o primeiro na ordem que segue */
+            align-self: center; /* Cemtraliza o elemento dentro do container */
+            align-self: flex-end; /* Coloca o elemento no final do container  */
+            align-self: flex-start ; /* Coloca o elemento no inicio do container */
+            align-self: stretch; /* Valor padrão */
+        }
+        .flex-container div {
+            width: 100px; /* Deixa os conteiners(div) mais largos */
+            flex-grow: 0;/* Continua igual sem distribuir os espço que falta */
+            flex-grow: 1; /* Os conteiners(div) são divididas igulamente para ocupar todo o espeço do conteiner(div) pai*/
+        }
+        .flex-container div:nth-child(1) {
+            flex-grow: 2; /* Cresce mais do que os outros pois e multiplicado por dois */
+        }
+        .flex-container {
+            width: 300px;
+            flex-shrink: 1; /* Faz com que os elementos encolham todos de formas iguais */
+        }
+        .flex-container div:nth-child(1){
+            flex-shrink: 5; /* Diminui esse elemento 5 vezes mais */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="flex-container tag nolabel">
+        <div class="tag nolabel">1</div>
+        <div class="tag nolabel">2</div>
+        <div class="tag nolabel">3</div>
+        <div class="tag nolabel">4</div>
+    </div>
+    <script src="js/tag.js"></script>
+</body>
+
+</html>

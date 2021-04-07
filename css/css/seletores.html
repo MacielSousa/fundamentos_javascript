@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Selectors</title>
+    <link rel="stylesheet" href="css/tag.css">
+    <style>
+        /*
+        *{ Seletor Universal
+            color: #ff0;
+            background-color: #f77;
+        }
+        .tag{ Seletor de Classe
+            color: red;
+            background-color: pink;
+        }
+        #aprovados{ Seletor de ID
+            color: red;
+            background-color: pink;
+        }
+        #aninhado > div{ Seletor aninhada, quer dizer que ele pega o primeira elemento filho direto e aplica o estilo css
+            color: red;
+            background-color: pink;
+        }
+        #aninhado sction{ Seletor aninhada, pega qualquer elemento descendente e aplica o estilo css
+            color: red;
+            background-color: pink;
+        }
+        p + ul{ Seletor irmão adjacentes, quer dizer que qualquer elemento ul, tal que p e antecedente direto o estilo css é aplicado
+            color: red;
+            background-color: pink;
+        }
+        p ~ ol{ Seletor irmão, qualquer elemento ol, tal que p e antecede ol tendo o mesmo pai, o estilo css vai ser aplicado em ol
+            color: red;
+            background-color: pink;
+        }
+        [feira]{ Seletor propriedade, qualquel elemento que tem aquela proprieada, é aplicado o estlo css
+            color: red;
+            background-color: pink;
+        }
+        [feira=casa]{  Esse seletor aplica o estilo a qualquer elemento que tenha a propriedade feira com o valor escritorio
+            color: red;
+            background-color: pink;
+        }
+        [feira~=escritorio]{ Esse seletor aplica o css a qualquer elemento que possui a porpriedade feira com o valor escritorio sendo indiferente se essa propriedade tenha mais de dois valores
+            color: red;
+            background-color: pink;
+        }
+        [feira*=sa]{esse seletor aplica o estilo a qualquer elemento que possui a propriedade feira e que no parametro e contido o sa
+            color: red;
+            background-color: pink;
+        }
+        span:nth-child(1){ esse seletor pega o primeiro span que é filho de alguem
+            color: red;
+            background-color: pink;
+        } 
+        section > :nth-child(odd){ (odd, even) Aplica o estilo em todos os span com posição imparis ou pares
+            color: red;
+            background-color: pink;
+        } 
+
+        section > span:nth-of-type(1){ Aplica o estilo css, ao primeiro span que é filho de section
+            color: red;
+            background-color: pink;
+        }  
+        */
+
+        section > span:nth-of-type(1){
+            color: red;
+            background-color: pink;
+        } 
+        
+    </style>
+</head>
+
+<body>
+    <div class='tag'>
+        <div class='tag'>
+            <p class='tag'>1</p>
+            <ul class='tag' feira='casa'>
+                <li>Arroz</li>
+                <li>Feijão</li>
+            </ul>
+            <ul class='tag' feira='escritorio empresa'>
+                <li>Café</li>
+                <li>Água</li>
+            </ul>
+            <ol id='aprovados' class='tag'>
+                <li>Maria</li>
+                <li>Pedro</li>
+                <li>Ana</li>
+            </ol>
+            <div id='aninhado' class='tag'>
+                <div class="tag">
+                    <section class='tag nolabel'>
+                        <span class='tag'>1</span>
+                        <p class='tag'>2</p>
+                        <span class='tag'>3</span>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/tag.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Resumo</title>
+</head>
+<body>
+    <div class="divpai">
+        <div class="div1"><p>1</p></div>
+        <div class="div2"><p>2</p></div>
+        <div class="div3"><p>3</p></div>
+        <div class="div3"><p>3</p></div>
+        <div class="div3"><p>3</p></div>
+        <div class="div3"><p>3</p></div>
+        <div class="div3"><p>3</p></div>
+        <div class="div3"><p>3</p></div>
+        <div class="div3"><p>3</p></div>
+        <div class="div3"><p>3</p></div>
+    </div>
+    <style>
+        body{
+            margin: 0;
+        }
+        .divpai{
+            display: flex;
+            width: 600px;
+            height: 44.1em;
+            background-color: blue;
+            border: solid 10px black;
+            flex-direction: column; /* Coloca os elementos em linha/row ou row-reversion ou coluna/column ou clumn-reverse*/
+            justify-content: flex-end; /* Alinhar os elementos - alinhar na linha de cima/flex-start; linha de baixo/flex-end; colocar no centro/center ou colocar espaços entre eles com os space-between/sem espço nas extremidades  ou space-round/espaço ao redor*/
+            align-items: stretch ; /*Alinhando os lementos na veritcal - flex-end/alinha na vertical na linha de baixo; center/alinahar vertical centro; esticar os elementos na vertica/stretch; baseline/alinha com a base do texto */
+            flex-wrap: wrap; /*Quebra alinha dentro do container para suportar todos os elemtos dentro do container pai nowarp ou warap*/
+            align-content: center; /* Alinhar as multiplas linhas dentro do container  flex-start/flex-end/space-acount/space-beteween*/
+        }
+        .div1, .div2, .div3{
+            display: flex;
+            flex-direction: row; 
+            justify-content: center; 
+            align-items: center; 
+            border: solid 5px white;
+            margin: 2px;
+        }
+        p {
+            color: white;
+            font-size: 30px;
+        }
+
+        .div1{
+            background-color: coral;
+            width: 80px;
+            height: 90px;
+           /* align-self: center;  Posisciona o elemento na linha de cima/baixo e centro*/
+           /* flex-grow: 3;  Crescer o tamanho do elemento definindo em numero */        
+        }
+        .div2{
+            background-color: coral;
+            width: 90px;
+            height: 100px;
+           /* align-self: center;  Posisciona o elemento na linha de cima/baixo e centro*/
+          /* flex-grow: 1;  Crescer o tamanho do elemento definindo em numero */
+        }
+        .div3{
+            background-color: coral;
+            width: 100px;
+            height: 110px;
+           /* align-self: center;  Posisciona o elemento na linha de cima/baixo e centro*/
+          /*  flex-grow: 1;  Crescer o tamanho do elemento definindo em numero */
+        }
+        /*===========================================================*/
+        /* Flex Box */
+    </style>
+</body>
+</html>

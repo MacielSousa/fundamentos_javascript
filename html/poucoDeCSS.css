@@ -1,0 +1,26 @@
+h1{
+    font-size: 30px;
+}
+.fundoVermelho{
+    background-color: red;
+}
+
+#textoPrincipal{
+    font-size: 40px;
+    font-weight: bold;
+    color: #fff;
+    padding: 10px;
+    background-color: #444;
+    margin-bottom: 50px;
+    border-radius: 10px;
+}
+
+#linha-horizontal{
+    
+    border: 1px dashed black;
+
+}
+
+.negrito {
+    font-weight: bold;
+}
