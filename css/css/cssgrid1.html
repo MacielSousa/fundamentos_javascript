@@ -26,6 +26,7 @@
         body{
             /*Usando o DisplayGrid */
             display: grid;
+            /* TRABALHANDO SÓ COM COLUNAS */
             /* Definindo qual a organização do meu template dentro do CSS*/
             grid-template-columns: 50% 50%;/* Dividindo a minha grid dentro da tela em duas colunas cada uma ocupando 50% da tela*/
             /* Dividindo o elemento em 12 colunas*/
@@ -34,7 +35,47 @@
             grid-template-columns: repeat(4, 8.33%);/* A função repeat, funciona da seguinte forma mutiplica o valor 4 pelo os valores 8.33% que dá no total de 4 colunas*/
             /* Dividindo o elemento em 11 colunas*/
             grid-template-columns: repeat(11, 100px) 100px;/* A função repeat, funciona da seguinte forma mutiplica o valor 4 pelo os valores 8.33% que dá no total de 4 colunas*/
+            /* minmax(100px, 300px) Definir o intervalo da coluna definindo o minimo e o maximo */
+            grid-template-columns:  200px  20% 1fr;/* A tela e dividida em três partes sendo 200px fixo, 20% do tamnho e 1fr que dizer que vai ocupar o resto que sobrou*/
+            grid-template-columns: 3fr 6fr 3fr;/* Tela será dividida em três colunas uma ocupando 3fr= 3avos, segunda coluna 6fr=6avos, terceira coluna 3fr=avos */
+
+            /* TRABALHANDO SÓ COM LINHAS */
+            grid-template-rows: 50% 25% 12.5% 12.5%; /* A primeira linha vai ocopar 50% da tela, segunda linha vai ocupar 25% da tela, e terceira linha vai ocupa 12.5% da tela e quarta linha vai ocupar 12.5% da tela */
+            grid-template-rows: 100px 1fr; /* Se não definir o espaço para as 4 linhas vai ocorrer o seguinte as linhas com os espção não definidos vai ocupar os espaços conforme o ajuste das outras, linha um vai pegar o espaço de 100px e linha 2 vai pegar 1fr vai pegar o maximo de espaço possivel reduzindo o espaço das restantes linhas não definida os tamanho */
+            grid-template-rows: 100px auto auto auto; /* a linha 1 vai ocupar o espaço de 100px, as outras linhas vão ser distribuidas de formas igualitarias */
+
+
         }
+
+        .d8{
+            /* O elemento 8 vai iniciar apartir da coluna 2 e vai finalizar na colina 4*/
+            /* Exemplo 1*/
+            grid-column-start: 2;
+            grid-column-end: 4;
+            
+            /*Exemplo 2*/
+            grid-column-end: span 2; /* Faz a mesma cois das linhas anterios, começa na linha dois e expande pra duas casas */
+            
+            /* Exemplo 3*/
+            grid-row-start: 3; /* Inicia na linha 3 da grid */
+            grid-row-end: 5; /*  E vai até a linha 5*/
+
+            /* Exemplo 3*/
+            grid-row-end: span 2; /* Faz a mesma coisa do exmplo 1 só que diferente usando o span e ocupano mais duas linhas*/
+        }
+
+        .d10,
+        .d11 {
+            /* podem se sobrepor */
+            grid-column-start: 1;
+            grid-column-start: 3;
+            grid-row-start: 5;
+            grid-row-end: span 1;
+        }
+        .d10 {
+            z-index: 10; /* Ordena a prioridade de apresentação do elemento, nessa caso o elemento 10 e 11 ocupa o mesmo espaço mas o elemento 10 sobrepõe o elemento 11*/
+        }
+
     </style>
 </head>
 
