@@ -7,6 +7,60 @@
     <link rel="stylesheet" href="css/tag.css">
     <style>
         /* ... */
+        /* Zerando a margem e o passing do elementos */
+        
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        /* Exemplo 1*/
+        /* Definindo o  grid area dos elemento para organizar dentro do template */
+        
+        header {
+            grid-area: cabecalho;
+        }
+        
+        nav {
+            grid-area: navegacao;
+        }
+        
+        main {
+            grid-area: conteudo;
+        }
+        
+        footer {
+            grid-area: rodape;
+        }
+        /* Exemplo 2*/
+        /*Definido a posição do elemento body */
+        
+        body {
+            /* Aplicando o grido no elemento */
+            display: grid;
+            /* a posição do elemento */
+            min-height: 100vh;
+            /* Definindo a organização do elemento em três colunas */
+            grid-template-columns: 300px 1fr;
+            /* Definindo a quantidade de linhas no meu template */
+            grid-template-rows: 100px 1fr 100px;
+            /* Organizando os elementos com o grid-tamplate-areas*/
+            /*Linha 1 - o cabecalho vai ocupar as duas colunas */
+            /* Linha 2 - primeira coluna vai ser alocado para navegacao e segunda coluna alocado para conteudo */
+            /* Linha 3 -  as duas colunas vai ser ocupada pelo o rodape*/
+            grid-template-areas: 'cabecalho cabecalho' 'navegacao conteudo' 'rodape rodape';
+        }
+        /*Exemplo 3*/
+        
+        @media(max-width: 700px) {
+            body {
+                grid-template-columns: 1fr;
+                grid-template-rows: 80px 1fr 100px;
+                grid-template-areas: 'navegacao' 'conteudo' 'rodape';
+            }
+            header {
+                display: none;
+            }
+        }
     </style>
 </head>
 
