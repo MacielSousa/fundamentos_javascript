@@ -10,7 +10,26 @@
     <div>Segundo</div>
     <div class="terceiro ultimo">.terceiro .ultimo</div>
     <script>              
-        // ...
+        /* Exemplo 1 */
+        /* Selecionando elemento pelo o ID*/
+        document.getElementById("primeiro").classList.add('destaque')
+        /*Exemplo 2*/
+        /* Selecionando os elementos pela o nome da tag('div')*/
+        const divs = document.getElementsByTagName('div')
+        /* Exemplo 3*/
+        /* Removendo a classe destaque do elemento div */
+        Array.from(divs).forEach(e => e.classList.remove('destaque'));
+        /*Exemplo 4*/
+        /* Colocando a classe destaque em todos os elementos divs */
+        const divsArray = [...divs]
+        divsArray.forEach(e => e.classList.add('destaque'));
+        /* Exemplo 5 */
+        /* Selecionando os elementos que tem a classe ultimo */
+        const ultimosElementos = document.getElementsByClassName('ultimo');
+        /* Percorrendo o HTMLCollection e removendo a classe destaque do elemento */
+        for(let e of ultimosElementos){
+            e.classList.remove('destaque')
+        }
     </script>
 </body>
 </html>
