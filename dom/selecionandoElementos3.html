@@ -31,11 +31,33 @@
         <button>Pesquisar</button>
     </form>
     <script>
-        console.log(document.forms)
-        console.log(document.forms[0])
-        console.log(document.getElementsByName('pesquisa'))
-        console.log(document.getElementsByName('form'))
-        console.log(document.pesquisa)
+        /* Exemplo 1 */
+        /* Acessando o Formulario - Obs: Apenas umas das formas de acessar o formulario */
+        console.log(document.forms) //Retorna um array HTMLCollection
+            /* Exemplo 2 */
+            /* Acessando o Formulario */
+        console.log(document.forms[0]) /* Retorna o primeiro item do array HTMLCollection*/
+            /* Exemplo 3*/
+            /* Seleciona o elemento pelo name  */
+        console.log(document.getElementsByName('pesquisa')) /* Retorna o elemento que tem o name="pesquisa", trazendo o resultado em NodeList*/
+            /*Exemplo 4*/
+            /*Selecionando o elemento pela a tag="form"*/
+        console.log(document.getElementsByTagName('form')) /* Retorna o formulario em HTMLCollection */
+            /* Exemplo 5*/
+            /* Seleciona o elemento pelo name, Exe..: documento.pesquisa */
+        console.log(document.pesquisa) /* Retorna o elemento html que tem o name="pesquisa"*/
+            /* Exemplo 5 */
+            /* Selecionando o selefiona o name="q" do name="pesquisar" */
+        console.log(document.pesquisa.q) /* Retorna o elemento com o nma="q" */
+            /*Exemplo 6*/
+            /* Alterando o Textyo do Formulario */
+        document.pesquisa.q.value = "Amazon Barzil" /* Mudando o valor do input */
+            /* Exmplo 7 */
+            /* Alterando o valor do select  */
+        document.pesquisa.hl.value = 'en-us'
+            /* Exemplo 8 */
+            /* pegando o indice que está selecionado dentro do select */
+        console.log(document.pesquisa.hl.selectedIndex) // Retorna o numero do indice da opção selecionda
     </script>
 </body>
 

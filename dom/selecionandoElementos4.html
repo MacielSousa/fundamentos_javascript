@@ -23,6 +23,46 @@
     </div>
     <script>
         // ...
+        /* Exemplo 1 */
+        /* Função para imprimir no console  */
+        function log() {
+            console.log(this)
+        }
+        /* Exmplo 2 */
+        /* Criando a variavel a função log */
+        HTMLCollection.prototype.log = log
+        HTMLElement.prototype.log = log
+        NodeList.prototype.log = log
+        Node.prototype.log = log
+
+        /* Exemplo 3 */
+        /* Pegar os elementos div ul*/
+        const lista = document.querySelector('div ul') // Retorna uma lista de lementos
+            /* Pegando o elemento pai de uma estrutura de lemento */
+        lista.parentNode.log()
+        lista.childNodes.log()
+
+        /* Exemplo 4 */
+        //Selecionando o primeiro elemento da lista de elementos
+        const primeiro = lista.firstChild // Retorna o tipo do primeiro elemento
+        primeiro.log()
+            /* Pegando o irmão do primeiro elemento */
+        primeiro.nextSibling.log() // Impremi o primeiro irmão do elemento texto
+
+        /* Exemplo 5*/
+        /* pegando o ultimo elemento da lista */
+        const ultimo = lista.lastElementChild
+        ultimo.log()
+        ultimo.previousSibling.log()
+
+        /* Exemplo 6 */
+        /* Selecionando todos os elementos  */
+        lista.children.log() // Retorna todos os elementos li
+        lista.firstChild.log() // pega o primeiro elemento
+        lista.parentNode.previousElementSibling.log()
+        lista.parentNode.nextElementSibling.log()
+
+        document.querySelectorAll('div ul li').log()
     </script>
 </body>
 
