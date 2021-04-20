@@ -16,7 +16,13 @@
         </ul>
     </div>
     <script>
-        // ...
+        /* Exemplo 1 */
+        //consegue somente lê valores mas não alterar
+        const lista = document.querySelector('#compras')
+        console.log(lista.attributes) //Consegue pegar todos os atributos que tem dentro de uma lista de elementos
+        console.log(lista.attributes[0]) //Notação de array para acessar o atributo
+        console.log(lista.attributes.destino) //Notação de ponto para acessar o atributo
+        console.log(lista.attributes['data-urgencia']) //Notação de colchetes
     </script>
 </body>
 

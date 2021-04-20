@@ -12,7 +12,31 @@
         Classes
     </div>
     <script>
-        // ...
+        /* Exemplo 1 */
+        const div = document.querySelector('div')
+            //Lista todas as classes do elemento div
+        const classes = div.classList //retorna toda as classes do elemendo div
+        classes.add('destaque') //Adiciona a classe destaque no elemento div
+        classes.remove('destaque') // Remove a classe destaque do elemento
+        classes.toggle('destaque') // toogle é uma função que verifica se existe aquela classe ele remove, se não existe ele adiciona a classe no elemento div
+            /* Verifica se uma classe existe dentro do elemento */
+        console.log(classes.contains('destaque')) //Retona true se contem e false se nã contem
+            /* Verifica o tanto de calsse que contem em um elemento */
+        console.log(classes.length) //Retorna o valor de quantas classe exites no elemento
+        classes.toggle('destaque') // como é a segunda chamada do toggle ele vai remover a classe do elemento
+        console.log(classes.length) // verifcando a quantidade de classe que exite no elemento
+
+        /* Exemplo 2 */
+        //Criando duas classes no elemento
+        classes.add('destaque1')
+        classes.add('destaque2')
+        console.log(classes.length) // Quantas classes exitem no elemento
+
+        for (let c of classes) {
+            console.log(c) //Imprimindo o nome das classes do elemento
+        }
+
+        classes.forEach(c => console.log(c))
     </script>
 </body>
 
