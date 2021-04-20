@@ -25,14 +25,25 @@
 
         /* Exemplo 2 */
         //Acessando os atributos da img
+        console.log('Element "img".........')
+        console.log('NodeType', img.nodeType)
+        console.log('NodeName', img.nodeName)
+
+        /* Exemplo 3 */
+        //Acessando atributo src
         const src = img.getAttributeNode('src')
         console.log('Attributo "src"..........')
         console.log('NodeType', src.nodeType)
+        console.log('NodeName', src.nodeName)
         console.log('NodeValue', src.nodeValue)
-
-        /* Exemplo 3 */
-        //Acessando atributo 
-        const
+        
+        /* Exemplo 4 */
+        //Acessando o atributo do link
+        const link = document.querySelector('a')
+        console.log('Elemto "a"..............')
+        console.log('href', link.href)
+        console.log('firstChild.nodeType', link.firstChild.nodeType)
+        link.firstChild.nodeValue = 'Novo Texto'
     </script>
 </body>
 
