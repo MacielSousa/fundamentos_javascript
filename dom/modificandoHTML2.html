@@ -12,7 +12,13 @@
         <p>Texto Inicial</p>
     </div>
     <script>
-        // ...
+        /* Exemplo 1 */
+        //Pega o elemento div
+        const div = document.querySelector('div')
+        div.innerHTML = 'Texto Alterado' // Modifica o valor interno do elemento
+            //div.outerHTML = 'Texto Alterado' // Modifica o valor total do elemento, substituindo a div
+        div.insertAdjacentHTML('beforebegin', '<p>Antes do Início<p>') //Colocando um elemento antes do inicio div
+        div.insertAdjacentHTML('afterbegin', '<p>Depois Início<p>') // Colocando o elemento antes do inicio
     </script>
 </body>
 
