@@ -10,7 +10,7 @@
 <body class='conteudo exercicio'>
     <div>
         <label for="compras">Compras</label>
-        <ul id="compras" destino='escritório' data-urgencia="5">
+        <ul id="compras" destino='escritorio' data-urgencia="5" data-maciel="Francisco">
             <li>Café</li>
             <li>Água</li>
             <li>Copo Descartável</li>
@@ -18,15 +18,38 @@
     </div>
     <script>
         /* Exercicio 1 */
-        // Acessando os elementos 
-        const lista = document.querySelector('div ul[destino="escritório"]')
-        console.log('Elemento "ul"...................')
+        // Acessando os atributos dos elementos
+        const lista = document.querySelector('div ul[destino="escritorio"]') //Selecionando um elemento dentro da div que é uma ul que tem uma propriedade igual escritorio
+        console.log('Elemento "ul" .........')
+            /*Exemplo 2*/
+            //Acessando os filhos do elemento
         console.log('childNodes', lista.childNodes)
-        console.log('destino', lista.destino)
-        console.log('getAttribute', lista.getAttribute('destino'))
-        console.log('hasAttribute', lista.hasAttribute('destino'))
-        lista.setAttribute('destino', 'empresa')
+            /* Exemplo 2 */
+            //Acessando o elemento pelo o id
+        console.log('destino', lista.destino) //Trás o nome do id="compras"
+        console.log('destino', lista.destino) //Dessa forma não se consegue acessar o atributo da propriedade
+        console.log('getAttribute', lista.getAttribute('destino')) // Retorna o nome do atributo da porpriedade
+            //hasAtribute verifica se um atributo está ou não dentro de um determinado elemento
+        console.log('hasAttribute', lista.hasAttribute('destino')) //Retorna true, pois de fato exite esse atributo
+            //setAtttribute modifica o valor do atributo
+        lista.setAttribute('destino', 'empresa') //Modifica o valor da propriedade destino que igual empresa
+            //setando um atributo que não esite, mas ele cria caso não exista e cria a propriedade
+        lista.setAttribute('status', 'aberto') // atribui o valor da propriedade status para aberto
+            // removeAttribute, remove uma propriedade do elemento
+        lista.removeAttribute('destino')
 
+        /* Exemplo 3 */
+        //atributos com o hífen
+        console.log(lista.dataset.urgencia) //Acessando o valor do atributo urgencia
+            //Modificando o valor do atributo 
+        lista.dataset.urgencia = 4 // Valor do atributo urgergencia agora e 4
+        console.log(lista.dataset.urgencia)
+
+        //Cuidado/Observação
+        const label = document.querySelector('label')
+        console.log(label.for) //Não consegue acessar o atributo desse jeito
+        console.log(label.htmlFor) //Forma certa de acessar o atributo
+        console.log(label.getAttribute('for')) // Forma certa de acessar o atributo
     </script>
 </body>
 
