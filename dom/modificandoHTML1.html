@@ -9,7 +9,45 @@
 
 <body class='conteudo exercicio'>
     <script>
-        // ...
+        /* Exemplo 1 */
+        // Passando o elemento body para uma constante 
+        const body = document.querySelector('body')
+
+        /* Exemplo 2 */
+        //Criando um novo elemento
+        const div1 = document.createElement('div') // criando um novo elemento com JavaScript
+        div1.classList.add('destaque') // Adiionando uma classe no elemento div1
+        div1.innerHTML = 'Primeiro' // Modificando o texto do elemento div1
+
+        /* Exemplo 3 */
+        //Criando um novo elemento
+        const div2 = document.createElement('div') // Criando elemento div
+        div2.setAttribute('wm-atributo', 'valor') // criando dois atributo e passando o valor do atributo
+        div2.innerHTML = 'Segundo' // Modificanto o texto do elemento
+
+        /* Exemplo 4 */
+        //Criando um novo elemento
+        const p = document.createElement('p') // criando um elemento p
+        p.innerHTML = 'Terceiro' // modificando o texto do paragrafo
+        const div3 = document.createElement('div') // criando um elemento div
+        div3.appendChild(p) // Adicinando o elemento paragrafodentro do elemento div3, adicinando como o ultimo elemento filho do elemento pai
+
+        /* Exemplo 5*/
+        // Adicionando as divs dentro do elemento body
+        body.appendChild(div1)
+        body.appendChild(div2)
+        body.appendChild(div3)
+
+        /* Exemplo 6 */
+        // criando elementos com createTextNode, e inderindo elemento dentro de outro com o insertBefore
+        const texto = document.createTextNode('Antes....') // Criando elemento texto
+        div3.insertBefore(texto, div3.childNodes[1]) //Adiciona o elemento texto antes do primeiro elemento
+
+        /* Exemplo 7 */
+        // clonando um elemento com nodeClone
+        const div4 = div3.cloneNode(true) // o elemento div3 está sendo clonado para o elemento div4
+        body.appendChild(div4)
+        body.removeChild(div3)
     </script>
 </body>
 
