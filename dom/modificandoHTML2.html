@@ -16,9 +16,16 @@
         //Pega o elemento div
         const div = document.querySelector('div')
         div.innerHTML = 'Texto Alterado' // Modifica o valor interno do elemento
-            //div.outerHTML = 'Texto Alterado' // Modifica o valor total do elemento, substituindo a div
+        //div.outerHTML = 'Texto Alterado' // Modifica o valor total do elemento, substituindo a div
         div.insertAdjacentHTML('beforebegin', '<p>Antes do Início<p>') //Colocando um elemento antes do inicio div
         div.insertAdjacentHTML('afterbegin', '<p>Depois Início<p>') // Colocando o elemento antes do inicio
+        div.insertAdjacentHTML('beforeend', '<p>Antes do Fim.</p>') //Colocando o elemento <p> ante do fim do elemento <div>
+        div.insertAdjacentHTML('afterend', '<p> Depois Fim </p>') // Colocando o elemento <p> depois do elemento <div>
+        
+        /* Exemplo 2 */
+        //Selecionadno somente o texto do html sem tags 
+        //console.log(div.innerHTML)//Seleciona o HTML com o texto
+        console.log(div.innerText) // Seleciona somente o texto do HTML
     </script>
 </body>
 
