@@ -9,9 +9,29 @@
 
 <body class="conteudo exercicio">
     <div>
-        <a href="https://google.com.br">Google</a>
+        <!-- Exemplo 1 -->
+        <!-- onclick="navegarEm5s(event)"  -->
+        <a espera-um-pouco href="https://google.com.br" >Google</a>
     </div>
     <script>
-        // ...
+        /* Exemplo 1 */
+        function navegarEm5s(e) {
+           e.preventDefault()
+            console.log('Saindo em 5s...')
+            setTimeout(() => {
+                const link = e.target //target e a propriedade que pega o link do evento disparado
+                window.location.href = link.href //passando o link do evento disparado para o link do browser
+            }, 5000)
+        }
+
+        /* Exemplo 2 */
+        //Usando o elemento a para capitura o evento click e dispara a função navegarEm5s
+        //const a = document.querySelector('a')
+        //a.onclick = navegarEm5s
+
+        /* Exemplo 3 */
+        //Selecionando o evento click do elemento <a> pela a propriedade [espera-um-pouco]
+        const a = document.querySelector('[espera-um-pouco]')
+        a.onclick = navegarEm5s
     </script>
 </body>
