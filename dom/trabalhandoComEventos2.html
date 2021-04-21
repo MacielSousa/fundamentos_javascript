@@ -10,6 +10,19 @@
 <body class="conteudo exercicio">
     <div>Elemento</div>
     <script>
-        // ...
+        /* Exemplo 1 */
+        //Selecionar o elemento pela a tag
+        const item = document.querySelector('div')
+        item.style.position = 'absolute'
+
+        item.onmouseover = e => {
+            const item = e.target
+            item.style.cursor = 'move'
+            if(e.buttons){
+                console.log(e)
+                item.style.top  = `${e.clientY - (item.clientHeight / 2)}px`
+                item.style.left = `${e.clientX - (item.clientWidth / 2)}px`  
+            }
+        }
     </script>
 </body>
